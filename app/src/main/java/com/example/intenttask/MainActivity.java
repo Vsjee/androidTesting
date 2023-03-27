@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 int resOp = op.suma(numf, nums);
 
                 Intent intent = new Intent(MainActivity.this, SumarView.class);
+                intent.putExtra("res", Integer.toString(resOp));
                 startActivity(intent);
             }
         });
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 int resOp = op.resta(numf, nums);
 
                 Intent intent = new Intent(MainActivity.this, RestarView.class);
+                intent.putExtra("res", Integer.toString(resOp));
                 startActivity(intent);
             }
         });
@@ -76,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 int resOp = op.multiplicacion(numf, nums);
 
                 Intent intent = new Intent(MainActivity.this, MultiplicarView.class);
+                intent.putExtra("res", Integer.toString(resOp));
                 startActivity(intent);
             }
         });
@@ -91,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 int resOp = op.division(numf, nums);
 
                 Intent intent = new Intent(MainActivity.this, DividirView.class);
+                intent.putExtra("res", Integer.toString(resOp));
                 startActivity(intent);
             }
         });
