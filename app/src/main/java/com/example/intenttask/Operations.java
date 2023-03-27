@@ -13,7 +13,7 @@ public class Operations {
         return numOne * numTwo;
     }
 
-    public int division(int numOne, int numTwo) {
+    public float division(float numOne, float numTwo) {
         return numOne / numTwo;
     }
 }

@@ -115,13 +115,13 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     int[] textNums = getNums(numOne, numTwo);
 
-                    int numf = textNums[0];
-                    int nums = textNums[1];
+                    float numf = textNums[0];
+                    float nums = textNums[1];
 
-                    int resOp = op.division(numf, nums);
+                    float resOp = op.division(numf, nums);
 
                     Intent intent = new Intent(MainActivity.this, DividirView.class);
-                    intent.putExtra("res", Integer.toString(resOp));
+                    intent.putExtra("res", Float.toString(resOp));
                     startActivity(intent);
                 }
             }
