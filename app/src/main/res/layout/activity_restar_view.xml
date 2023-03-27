@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="124dp"
-        android:text="back"
+        android:text="@string/go_back"
         android:textColor="#fff"
         app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Result"
+            android:text="@string/result"
             android:textColor="#000"
             android:textSize="26dp" />
 
@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="0"
+            android:text="@string/result_op"
             android:textColor="#000"
             android:textSize="26dp" />
     </LinearLayout>
