@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Operations op = new Operations();
+        DialogError dialogError = new DialogError();
 
         numOne = findViewById(R.id.numOneText);
         numTwo = findViewById(R.id.numTwoText);
@@ -38,64 +38,92 @@ public class MainActivity extends AppCompatActivity {
         btnSumar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int[] textNums = getNums(numOne, numTwo);
+                String num1 = numOne.getText().toString();
+                String num2 = numTwo.getText().toString();
 
-                int numf = textNums[0];
-                int nums = textNums[1];
+                if(num1.equals("") || num2.equals("")) {
+                    dialogError.show(getSupportFragmentManager(), "invalid");
+                } else {
+                    int[] textNums = getNums(numOne, numTwo);
 
-                int resOp = op.suma(numf, nums);
+                    int numf = textNums[0];
+                    int nums = textNums[1];
 
-                Intent intent = new Intent(MainActivity.this, SumarView.class);
-                intent.putExtra("res", Integer.toString(resOp));
-                startActivity(intent);
+                    int resOp = op.suma(numf, nums);
+
+                    Intent intent = new Intent(MainActivity.this, SumarView.class);
+                    intent.putExtra("res", Integer.toString(resOp));
+                    startActivity(intent);
+                }
             }
         });
 
         btnRestar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int[] textNums = getNums(numOne, numTwo);
+                String num1 = numOne.getText().toString();
+                String num2 = numTwo.getText().toString();
 
-                int numf = textNums[0];
-                int nums = textNums[1];
+                if(num1.equals("") || num2.equals("")) {
+                    dialogError.show(getSupportFragmentManager(), "invalid");
+                } else {
+                    int[] textNums = getNums(numOne, numTwo);
 
-                int resOp = op.resta(numf, nums);
+                    int numf = textNums[0];
+                    int nums = textNums[1];
 
-                Intent intent = new Intent(MainActivity.this, RestarView.class);
-                intent.putExtra("res", Integer.toString(resOp));
-                startActivity(intent);
+                    int resOp = op.resta(numf, nums);
+
+                    Intent intent = new Intent(MainActivity.this, RestarView.class);
+                    intent.putExtra("res", Integer.toString(resOp));
+                    startActivity(intent);
+                }
             }
         });
 
         btnMultiplicar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int[] textNums = getNums(numOne, numTwo);
+                String num1 = numOne.getText().toString();
+                String num2 = numTwo.getText().toString();
 
-                int numf = textNums[0];
-                int nums = textNums[1];
+                if(num1.equals("") || num2.equals("")) {
+                    dialogError.show(getSupportFragmentManager(), "invalid");
+                } else {
+                    int[] textNums = getNums(numOne, numTwo);
 
-                int resOp = op.multiplicacion(numf, nums);
+                    int numf = textNums[0];
+                    int nums = textNums[1];
 
-                Intent intent = new Intent(MainActivity.this, MultiplicarView.class);
-                intent.putExtra("res", Integer.toString(resOp));
-                startActivity(intent);
+                    int resOp = op.multiplicacion(numf, nums);
+
+                    Intent intent = new Intent(MainActivity.this, MultiplicarView.class);
+                    intent.putExtra("res", Integer.toString(resOp));
+                    startActivity(intent);
+                }
             }
         });
 
         btnDividir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int[] textNums = getNums(numOne, numTwo);
+                String num1 = numOne.getText().toString();
+                String num2 = numTwo.getText().toString();
 
-                int numf = textNums[0];
-                int nums = textNums[1];
+                if (num1.equals("") || num2.equals("")) {
+                    dialogError.show(getSupportFragmentManager(), "invalid");
+                } else {
+                    int[] textNums = getNums(numOne, numTwo);
 
-                int resOp = op.division(numf, nums);
+                    int numf = textNums[0];
+                    int nums = textNums[1];
 
-                Intent intent = new Intent(MainActivity.this, DividirView.class);
-                intent.putExtra("res", Integer.toString(resOp));
-                startActivity(intent);
+                    int resOp = op.division(numf, nums);
+
+                    Intent intent = new Intent(MainActivity.this, DividirView.class);
+                    intent.putExtra("res", Integer.toString(resOp));
+                    startActivity(intent);
+                }
             }
         });
     }
