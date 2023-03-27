@@ -80,6 +80,7 @@
         android:layout_marginEnd="84dp"
         android:layout_marginBottom="120dp"
         android:text="Dividir"
+        android:textColor="#fff"
         app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -90,6 +91,7 @@
         android:layout_height="48dp"
         android:layout_marginBottom="56dp"
         android:text="Sumar"
+        android:textColor="#fff"
         app:backgroundTint="#000000"
         app:layout_constraintBottom_toTopOf="@+id/btnMultiplicar"
         app:layout_constraintEnd_toStartOf="@+id/btnRestar"
@@ -103,6 +105,7 @@
         android:layout_marginEnd="84dp"
         android:layout_marginBottom="56dp"
         android:text="Restar"
+        android:textColor="#fff"
         app:backgroundTint="#000000"
         app:layout_constraintBottom_toTopOf="@+id/btnDividir"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -113,6 +116,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="120dp"
         android:text="Multiplicar"
+        android:textColor="#fff"
         app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnDividir"

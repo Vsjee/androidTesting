@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="124dp"
         android:text="back"
+        android:textColor="#fff"
         app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
