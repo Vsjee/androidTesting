@@ -9,4 +9,5 @@
     <string name="substract_n">Restar</string>
     <string name="multiplication_n">Multiplicar</string>
     <string name="division_n">Dividir</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

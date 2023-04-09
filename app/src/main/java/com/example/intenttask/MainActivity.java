@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnRestar;
     private Button btnMultiplicar;
     private Button btnDividir;
+    private Button btnMaps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         btnRestar = findViewById(R.id.btnRestar);
         btnMultiplicar = findViewById(R.id.btnMultiplicar);
         btnDividir = findViewById(R.id.btnDividir);
+
+        btnMaps = findViewById(R.id.maps);
 
         btnSumar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,6 +127,14 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("res", Float.toString(resOp));
                     startActivity(intent);
                 }
+            }
+        });
+
+        btnMaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+                startActivity(intent);
             }
         });
     }
