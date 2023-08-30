@@ -1,0 +1,20 @@
+name: Commit alert
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  send-alert:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Configurar el ambiente
+      run: echo "Setting the environment"
+    
+    - name: Send alert
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      run: |
+        echo "A push has been made with a commit"
